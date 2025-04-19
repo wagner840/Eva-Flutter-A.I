@@ -38,31 +38,39 @@ class MyHomePage extends StatelessWidget {
           children: <Widget>[
             ElevatedButton(
               child: Text('Plant Identification'),
-              onPressed: () { Navigator.pushNamed(context, '/plant_id'); },
+              onPressed: () {
+                Navigator.pushNamed(context, '/plant_id');
+              },
             ),
             ElevatedButton(
               child: Text('Gardening Tips'),
-              onPressed: () { Navigator.pushNamed(context, '/gardening_tips'); },
+              onPressed: () {
+                Navigator.pushNamed(context, '/gardening_tips');
+              },
             ),
             ElevatedButton(
               child: Text('Community Forum'),
-              onPressed: () { Navigator.pushNamed(context, '/community_forum'); },
+              onPressed: () {
+                Navigator.pushNamed(context, '/community_forum');
+              },
             ),
             ElevatedButton(
               child: Text('Local Resources'),
-              onPressed: () { Navigator.pushNamed(context, '/local_resources'); },
+              onPressed: () {
+                Navigator.pushNamed(context, '/local_resources');
+              },
             ),
             ElevatedButton(
               child: Text('Marketplace'),
-              onPressed: () { Navigator.pushNamed(context, '/marketplace'); },
+              onPressed: () {
+                Navigator.pushNamed(context, '/marketplace');
+              },
             ),
           ],
         ),
       ),
     );
   }
-}
-
 }
 
 class GardeningTipsScreen extends StatelessWidget {
