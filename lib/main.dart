@@ -1,3 +1,4 @@
+import 'plant_identification_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -62,14 +63,6 @@ class MyHomePage extends StatelessWidget {
   }
 }
 
-class PlantIdentificationScreen extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: Text('Plant Identification')),
-      body: Center(child: Text('Plant Identification Screen')),
-    );
-  }
 }
 
 class GardeningTipsScreen extends StatelessWidget {
