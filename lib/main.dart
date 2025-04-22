@@ -1,114 +1,75 @@
-import 'plant_identification_screen.dart';
 import 'package:flutter/material.dart';
+import 'plant_identification_screen.dart';
+import 'gardening_tips_screen.dart';
+import 'community_forum_screen.dart';
+import 'local_resources_screen.dart';
+import 'marketplace_screen.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const EVAAgriculturaUrbanaApp());
 }
 
-class MyApp extends StatelessWidget {
+class EVAAgriculturaUrbanaApp extends StatelessWidget {
+  const EVAAgriculturaUrbanaApp({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'EVA Agricultura Urbana',
       theme: ThemeData(
-        primarySwatch: Colors.green,
-      ),
-      home: MyHomePage(),
-      routes: {
-        '/plant_id': (context) => PlantIdentificationScreen(),
-        '/gardening_tips': (context) => GardeningTipsScreen(),
-        '/community_forum': (context) => CommunityForumScreen(),
-        '/local_resources': (context) => LocalResourcesScreen(),
-        '/marketplace': (context) => MarketplaceScreen(),
-      },
-    );
-  }
-}
-
-class MyHomePage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('EVA Agricultura Urbana'),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            ElevatedButton(
-              child: Text('Plant Identification'),
-              onPressed: () {
-                Navigator.pushNamed(context, '/plant_id');
-              },
+              // Define the default brightness and colors.
+              brightness: Brightness.light, // Switch between light and dark modes.
+              primaryColor: Colors.green[700], // Main brand color
+              // Define a text theme for the app.
+              textTheme: const TextTheme(
+                bodyText2: TextStyle(fontSize: 16.0, color: Colors.black87), // Body text
+              ),
+              // Define AppBar theme with improved contrast
+              appBarTheme: AppBarTheme(
+                backgroundColor: Colors.green[700], // Use primary color
+                titleTextStyle: const TextStyle(
+                  color: Colors.white,
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.bold,
+                ),
+                iconTheme: const IconThemeData(color: Colors.white), // Ensure icons are visible
+                foregroundColor: Colors.white, // Use onPrimary color
+                elevation: 4.0, // Add subtle shadow
+                centerTitle: true, // Center align AppBar titles for consistency
+              ),
+              // Define Button Themes for consistency
+              elevatedButtonTheme: ElevatedButtonThemeData(
+                style: ElevatedButton.styleFrom(
+                  // Use primary color for main action buttons by default
+                  backgroundColor: Colors.green[700], 
+                  foregroundColor: Colors.white,
+                  padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 12.0),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(8.0), // Rounded corners
+                  ),
+                ).copyWith(
+                  // Overlay color to improve contrast on pressed state
+                  overlayColor: MaterialStateProperty.resolveWith<Color?>(
+                    (Set<MaterialState> states) {
+                      if (states.contains(MaterialState.pressed)) {
+                        return Colors.green[900]; // Darker shade for pressed state
+                      }
+                      return null; // Use the default value.
+                    },
+                  ),
+                ),
+              ),
+              // Add other theme customizations (CardTheme, InputDecoratioTheme, etc.)
             ),
-            ElevatedButton(
-              child: Text('Gardening Tips'),
-              onPressed: () {
-                Navigator.pushNamed(context, '/gardening_tips');
-              },
-            ),
-            ElevatedButton(
-              child: Text('Community Forum'),
-              onPressed: () {
-                Navigator.pushNamed(context, '/community_forum');
-              },
-            ),
-            ElevatedButton(
-              child: Text('Local Resources'),
-              onPressed: () {
-                Navigator.pushNamed(context, '/local_resources');
-              },
-            ),
-            ElevatedButton(
-              child: Text('Marketplace'),
-              onPressed: () {
-                Navigator.pushNamed(context, '/marketplace');
-              },
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}
-
-class GardeningTipsScreen extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: Text('Gardening Tips')),
-      body: Center(child: Text('Gardening Tips Screen')),
-    );
-  }
-}
-
-class CommunityForumScreen extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: Text('Community Forum')),
-      body: Center(child: Text('Community Forum Screen')),
-    );
-  }
-}
-
-class LocalResourcesScreen extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: Text('Local Resources')),
-      body: Center(child: Text('Local Resources Screen')),
-    );
-  }
-}
-
-class MarketplaceScreen extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: Text('Marketplace')),
-      body: Center(child: Text('Marketplace Screen')),
-    );
-  }
-}
+            // Set the initial route to the HomeScreen
+            home: const HomeScreen(),
+            // Define routes for potential named navigation (optional for now)
+            // routes: {
+            //   '/home': (context) => HomeScreen(),
+            //   '/plant_id': (context) => PlantIdentificationScreen(),
+            //   '/gardening_tips': (context) => GardeningTipsScreen(),
+            //   '/forum': (context) => CommunityForumScreen(),
+            // },
+          );
+        }
+      }

@@ -1,0 +1,64 @@
+# EVA Agricultura Urbana App Design Document
+## 1. Introduction
+## 2. Goals and Objectives
+## 3. Target Audience
+### 3.1 Primary Audience
+Urban residents in Curitiba and surrounding areas interested in starting or expanding their own urban gardens.
+
+### 3.2 Secondary Audience
+Local farmers, community organizations, and businesses involved in sustainable agriculture and locally grown produce.
+## 4. Features
+### 4.1 Plant Identification
+Allows users to identify plants using their mobile device's camera.
+
+### 4.2 Gardening Tips
+Provides users with personalized gardening advice based on their location, plant types, and weather conditions.
+
+### 4.3 Community Forums
+Enables users to connect with other urban gardeners, share tips and advice, and ask questions.
+
+### 4.4 Local Resources Integration
+Connects users with local resources such as nurseries, community gardens, and farmers markets.
+
+### 4.5 Marketplace
+Provides a platform for users to buy and sell locally grown produce and gardening-related products.
+## 5. UI/UX Design
+#### 5.1 Overall Design
+*   The app will have a clean and intuitive interface.
+*   The design will be visually appealing and easy to use.
+*   The app will be responsive and work well on different screen sizes.
+*   The app will support portrait and landscape orientations for both phones and tablets.
+#### 5.2 Color Scheme
+*   The app will use a color scheme that is consistent with the EVA Agricultura Urbana brand.
+*   The colors will be calming and nature-inspired, using a palette of greens, browns, and natural tones.
+*   The color scheme will be carefully chosen to ensure readability and visual appeal.
+#### 5.3 Navigation
+*   The app will have a clear and consistent navigation system.
+*   Users will be able to easily find the information and features they need through a bottom navigation bar or a side drawer.
+*   The navigation will be intuitive and easy to use, with clear labels and icons.
+#### 5.4 Accessibility
+*   The app will be accessible to users with disabilities.
+*   The app will follow accessibility guidelines and best practices, such as providing alternative text for images and ensuring sufficient color contrast.
+*   The app will be tested with accessibility tools to ensure it is usable by people with disabilities.
+
+### 6. Technical Specifications
+#### 6.1 Programming Language
+*   Flutter will be used to develop the app.
+#### 6.2 Database
+*   A cloud-based database such as Firebase or Supabase will be used to store data.
+#### 6.3 APIs
+*   The app will use APIs to integrate with local resources and other services.
+#### 6.4 Architecture
+*   The app will follow a modular architecture to allow for easy maintenance and updates.
+
+### 7. Future Enhancements
+*   Integration with weather data to provide personalized gardening advice.
+*   Gamification features to encourage user engagement.
+*   Expansion of the marketplace to include other gardening-related products and services.
+*   Support for multiple languages.
+
+### 1.1 Purpose
+The EVA Agricultura Urbana app aims to connect urban gardeners with resources, knowledge, and a community to support sustainable urban agriculture practices in Curitiba and beyond.
+
+### 1.2 Scope
+The app will include features such as plant identification, gardening tips, community forums, integration with local resources, and a marketplace for buying and selling locally grown produce.
